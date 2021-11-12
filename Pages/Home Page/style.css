@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 *{
     font-family: Asap, san-serif;
@@ -10,12 +11,10 @@
     --topnbottom: #2D2D2D;
     --topnbottomText:white;
 }
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-.main{
-    
+
+body{
+    background-image: url("biking.jpg");
+    background-repeat: repeat;
 }
 
 .banner{
@@ -43,28 +42,42 @@ ul{
     height: 100%;
     display: table-cell;
     vertical-align: middle;
-    font-weight: 500;
+    font-weight: 1000;
     font-size: 24px;
+	font-family: 'Roboto Mono', monospace;
 }
-.logo span{
-    font-weight: 200;
+.logo h1 span{
+    font-weight: 100;
+	font-family: 'Roboto Mono', monospace;
 }
 
 .account{
     display: flex;
-    flex-direction: row;
-
+	float: right;
+    align-items: center;
+    justify-content: center;
+	height: 100%;
 }
 
+.account li{
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	margin: 0 10px;
+	float: left;
+}
+
+
+
 .dropbtn {
-    background-color: #04AA6D;
+    background-color: var(--topnbottom);
+    font-size: 16px;
     color: white;
     border: none;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.dropbtn span{
+    font-size: 8px;
 }
 
 .dropdown-content {
@@ -78,13 +91,86 @@ ul{
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 10px;
     text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.hero{
+    width: 85%;
+    margin: 50px auto;
+    background-color: #686868;
+    height: 250px;
+    display: table;
+		
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.heroInnards{
+    min-width: 500px;
+    padding:25px;
+    background-color: #979797;
+    width: 65%;
+    height: 65%;
+    color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.heroHeader h1{
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.heroText{
+    display: inline-block;
+    width: 65%;
+    line-height: 20px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.moreContent{
+	display: table;
+	width: 75%;
+	background-color: #634040;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.innerContent{
+	margin: 20px auto;
+	background-color: pink;
+	height: 50%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer {
+	color: white;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:100px;   
+	background:var(--topnbottom);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.footer p{
+	font-size: 18px
+}
